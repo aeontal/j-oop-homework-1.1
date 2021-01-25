@@ -58,7 +58,7 @@ public class Radio {
         if (channelNum < channelMax) {
             this.channelNum++;
         } else {
-            this.channelNum = 1;
+            this.channelNum = channelMin;
         }
         return channelNum;
     }
@@ -67,7 +67,7 @@ public class Radio {
         if (channelNum > channelMin) {
             this.channelNum--;
         } else {
-            this.channelNum = 9;
+            this.channelNum = channelMax;
         }
         return channelNum;
     }
