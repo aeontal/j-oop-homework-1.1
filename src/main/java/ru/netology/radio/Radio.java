@@ -4,11 +4,18 @@ import javax.swing.*;
 
 public class Radio {
     private int channelNum;
-    private int channelMax = 9;
+    private int channelMax = 10;
     private int channelMin = 1;
     private int volumeLevel;
-    private int volumeMax = 10;
+    private int volumeMax = 100;
     private int volumeMin = 0;
+
+    public Radio() {
+    }
+
+    public Radio(int channelMax) {
+        this.channelMax = channelMax;
+    }
 
     public void setChannelNum(int channelNum) {
         if (channelNum > channelMax) {
@@ -22,6 +29,10 @@ public class Radio {
 
     public int getChannelNum() {
         return channelNum;
+    }
+
+    public int getChannelMax() {
+        return channelMax;
     }
 
     public void setVolumeLevel(int volumeLevel) {

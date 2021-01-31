@@ -19,8 +19,8 @@ class RadioTest {
     @Test
     void shouldCheckNextChannelMax() {
 
-        Radio radio = new Radio();
-        radio.setChannelNum(9);
+        Radio radio = new Radio(20);
+        radio.setChannelNum(20);
         int expected = 1;
         int actual = radio.nextChannel();
         assertEquals(expected, actual);
@@ -39,9 +39,9 @@ class RadioTest {
     @Test
     void shouldCheckPreviousChannelMin() {
 
-        Radio radio = new Radio();
+        Radio radio = new Radio(20);
         radio.setChannelNum(1);
-        int expected = 9;
+        int expected = radio.getChannelMax();
         int actual = radio.previousChannel();
         assertEquals(expected, actual);
     }
@@ -67,8 +67,8 @@ class RadioTest {
     @Test
     void shouldCheckIncreaseVolumeMax() {
         Radio radio = new Radio();
-        radio.setVolumeLevel(10);
-        int expected = 10;
+        radio.setVolumeLevel(100);
+        int expected = 100;
         int actual = radio.increaseVolume();
         assertEquals(expected, actual);
     }
@@ -102,9 +102,9 @@ class RadioTest {
 
     @Test
     void shouldCheckSetChannelBeyondLimits() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         radio.setChannelNum(33);
-        int expected = 9;
+        int expected = radio.getChannelMax();
         int actual = radio.getChannelNum();
         assertEquals(expected, actual);
     }
@@ -121,8 +121,8 @@ class RadioTest {
     @Test
     void shouldCheckSetVolumeBeyondLimits() {
         Radio radio = new Radio();
-        radio.setVolumeLevel(30);
-        int expected = 10;
+        radio.setVolumeLevel(110);
+        int expected = 100;
         int actual = radio.getVolumeLevel();
         assertEquals(expected, actual);
     }
