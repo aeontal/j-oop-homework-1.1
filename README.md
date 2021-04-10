@@ -1,4 +1,4 @@
-# Radioman [![Java CI (flexible)](https://github.com/aeontal/j-oop-homework-1.1/actions/workflows/maven.yml/badge.svg)](https://github.com/aeontal/j-oop-homework-1.1/actions/workflows/maven.yml)
+# Radioman [![Java CI with Maven](https://github.com/aeontal/j-oop-homework-1.1/actions/workflows/main.yml/badge.svg?branch=Main)](https://github.com/aeontal/j-oop-homework-1.1/actions/workflows/main.yml)
 
 ### Задача: Управление радио
 
